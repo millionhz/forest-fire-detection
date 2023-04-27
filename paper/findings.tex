@@ -1,0 +1,34 @@
+\section{Findings}
+
+In this study, we evaluated the accuracy and performance of various deep learning segmentation models for forest fire detection. Our findings indicate that among the models evaluated, Segformers \cite{xie_segformer_2021} performed exceptionally well in detecting forest fires compared to other methods, such as Deeplab \cite{chen_rethinking_2017} and LRASPP \cite{howard2019searching}. Table \ref{table:1} summarizes the key metrics for each evaluated model.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Comparison of the performance metrics of different deep learning segmentation models}
+    \begin{tabular}{c|c|c|c}
+    \hline
+        \textbf{Model} & \textbf{Params (M)} & \textbf{IoU} & \textbf{F1} \\ \hline
+        deeplabv3\_mobilenet\_v3\_large & 11.0 & 0.3544 & 0.5230 \\ \hline
+        deeplabv3\_resnet101 & 60.9 & 0.375 & 0.5450 \\ \hline
+        deeplabv3\_resnet50 & 42.0 & 0.3915 & 0.5623 \\ \hline
+        lraspp\_mobilenet\_v3 & 3.2 & 0.3713 & 0.5412 \\ \hline
+        \textbf{segformer-b0} & \textbf{3.7} & \textbf{0.7446} & \textbf{0.8535} \\ \hline
+        segformer-b2 & 25.8 & 0.7671 & 0.8680 \\ \hline
+        ensemble & - & 0.3724 & 0.5423 \\ \hline
+    \end{tabular}
+    \label{table:1}
+\end{table}
+
+The impact of different model architectures, such as the atrous convolutions of Deeplab \cite{chen_rethinking_2017} and the transformer architecture of Segformers \cite{xie_segformer_2021}, was also investigated. We found that different models with varying parameters and backbones performed similarly on the FLAME dataset, except for Segformers, which performed exceptionally well, despite having fewer parameters. This suggests that the transformer architecture used in Segformers \cite{xie_segformer_2021} may be better suited for forest fire detection tasks compared to other classical deep learning techniques, such as Deeplab and LRASPP.
+
+Out of all the fitted models in the study, Segformers \cite{xie_segformer_2021} emerged as the most promising approach, providing better results than other classical deep learning techniques. The transformer architecture used in Segformers allows the model to attend to different parts of the input data, resulting in more accurate and robust models. The advantage of the transformer architecture lies in its ability to capture long-range dependencies and global context, which is crucial for the detection of forest fires that can exhibit complex spatial patterns and evolve over time.
+
+On the other hand, classical deep learning techniques, such as the ones used in Deeplab \cite{chen_rethinking_2017} and LRASPP \cite{howard2019searching} models, rely on convolutional layers and pooling operations that may not capture the global context as effectively as transformers. This limitation may explain their lower performance in detecting forest fires compared to Segformers.
+
+Despite the promising results obtained with Segformers, the study has some limitations that should be addressed in future research. First, the use of a more diverse dataset, such as the Flame and Smoke Detection Dataset for Deep Learning in Fire Detection (FASDD) \cite{wang_fasdd_2022}, would improve the results and generalizability of the model. This would allow the model to learn from a wider variety of fire scenarios, vegetation types, and environmental conditions, increasing its effectiveness in real-world applications.
+
+Second, the importance of data augmentation techniques should be explored to improve the robustness of the model. By augmenting the training data with various transformations, such as rotations, flips, and color adjustments, the model could become more invariant to different input data variations, further enhancing its performance in detecting forest fires. These data augmentation techniques could also help the model better generalize to unseen examples, making it more reliable for practical use.
+
+Lastly, further exploration of transformer-based architectures for forest fire detection tasks is recommended. As this study has shown, transformer architectures hold great potential for improving the performance of deep learning segmentation models in detecting forest fires. Future research could focus on fine-tuning existing transformer-based architectures, or developing novel architectures specifically tailored for forest fire detection. Additionally, the integration of multi-modal data, such as weather information or remote sensing data, could further improve the accuracy and usefulness of these models in real-world applications.
+
+In conclusion, our study demonstrated the effectiveness of the Segformer architecture in detecting forest fires compared to other classical deep learning techniques, such as Deeplab and LRASPP. The transformer architecture's ability to capture long-range dependencies and global context enables it to outperform these classical approaches, making it a promising direction for future research in forest fire detection.

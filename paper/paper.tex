@@ -1,0 +1,68 @@
+\documentclass[conference]{IEEEtran}
+\pagestyle{plain}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+% \usepackage[utf8]{inputenc}
+% \usepackage{afterpage,graphicx,fancyhdr,amsmath,amssymb,amsthm,subfig,url,longtable,placeins,tabto,enumitem, array, color, colortbl, geometry, etoolbox, multirow}
+% \usepackage[none]{hyphenat}
+% \usepackage{xspace}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+    
+\begin{document}
+
+\definecolor{gray}{gray}{0.8}
+\definecolor{blue}{RGB}{185,202,222}
+\definecolor{green}{RGB}{166,218,149}
+\definecolor{orange}{RGB}{255,197,165}
+
+\newcommand\todo[1]{{\color{red}\textbf{TODO: #1}\xspace}}
+\newcommand\es[1]{{\color{orange}\textbf{ES: #1}\xspace}} % Eimaan
+\newcommand\mh[1]{{\color{blue}\textbf{MH: #1}\xspace}} % Hamza
+
+\title{Advancements in Deep Learning for Forest Fire Detection}
+
+\author{\IEEEauthorblockN{ Muhammad Hamza}
+\IEEEauthorblockA{\textit{Department of Computer Science} \\
+\textit{Lahore University of Management Sciences}\\
+Lahore, Pakistan \\
+m.waqas.hamza@gmail.com}
+\and
+\IEEEauthorblockN{Eimaan Saqib}
+\IEEEauthorblockA{\textit{Department of Computer Science} \\
+\textit{Lahore University of Management Sciences}\\
+Lahore, Pakistan \\
+eimaansaqib@outlook.com}
+}
+
+\maketitle
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+\begin{IEEEkeywords}
+Forest fire detection,
+Deep learning,
+Segmentation models,
+Transformer-based architectures,
+Computer vision.
+\end{IEEEkeywords}
+
+\input{introduction}
+\input{related}
+\input{dataset}
+\input{method}
+\input{findings}
+\input{conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{paper}
+
+\end{document}

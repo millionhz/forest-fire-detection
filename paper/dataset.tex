@@ -1,0 +1,50 @@
+\section{Dataset}
+
+In this study, we surveyed a diverse set of annotated datasets for the training and evaluation of deep learning models for forest fire detection. The datasets were primarily categorized into two groups: object detection and segmentation. Herein, we provide a comprehensive description of the candidate datasets including their characteristics, annotations, and other relevant details. A summary of the datasets is given in Table \ref{tab:datasets} on page \pageref{tab:datasets}.
+
+
+\subsection{Segmentation Datasets}
+
+\subsubsection{BowFIRE \cite{chino_bowfire_2015}}
+The segmentation dataset was first introduced in 2015 in the paper “BoWFire: Detection of Fire in Still Images by Integrating Pixel Color and Texture Analysis”. The dataset comprises 226 images of size 1024x768, with 119 images labeled as fire and 107 images labeled as non-fire. The fire class includes various fire incidents, such as buildings on fire, industrial fires, car accidents, and riots, while the non-fire class includes emergency situations with no visible fire and images with fire-like regions, such as sunsets and red or yellow objects. The dataset also includes segmentation masks marking regions of fire in the images, making it viable for semantic segmentation tasks.
+
+\subsubsection{FLAME \cite{shamsoshoara_aerial_2020}}
+The segmentation dataset was introduced in 2020 by Northern Arizona University. The dataset was collected during the winter months in high-elevation forests of the Southwest. It contains aerial footage of fires along with segmentation masks captured by drones during a prescribed burning piled detritus in an Arizona pine forest. The dataset also contains thermal heatmaps captured by infrared cameras. It comprises 2003 annotated frames for segmentation of size 3480x2160.
+
+\subsubsection{Wildfire Observers and Smoke Recognition \cite{wildfire_observer_smoke_recog}}
+The dataset were introduced in 2010. It contains sequences that have recorded the first appearance of smoke in the scene. The dataset comprises a total of 256 frames along with ground truth segmentation masks, each of size 720x576 captured using a low-res camera. The database also offers a wildfire smoke image dataset photographed from the ground and air for segmentation, but it only includes 64 training images.
+
+\subsection{Object Detection Dataset}
+
+\subsubsection{Open Wildfire Smoke Dataset \cite{wildfire_aiformankind}}
+The dataset was introduced in 2021. The dataset contains 2192 annotated images created from HPWREN Cameras images and annotated these images with bounding boxes for object detection. The dataset is also available in a format for classification of smoke vs no smoke. The repository also provides a cloud dataset, which has similar visual appearances as wildfire smoke. Detection models may confuse cloud or fog with smoke. This dataset can be used to further improve the model's generalizability.
+
+\subsection{Other Datasets}
+\subsubsection{FASDD \cite{wang_fasdd_2022}}
+Its is a comprehensive fire detection dataset from 2022 consisting of 100,000 flame and smoke images from multiple sources. The dataset provides annotations in four different formats for training deep learning models, and the models trained on FASDD have demonstrated promising performance in fire detection and localization. The dataset can potentially be used for recognizing and monitoring forest fires from different platforms, including watchtowers, drones, and optical satellites. However, we were unable to utilize this dataset as it was under embargo.
+
+\begin{table*}[!htbp]
+    \caption{Summary of Datasets}
+    \centering
+    \begin{tabular}{c|c|c|c|c}
+         \hline
+        \textbf{Dataset} & \textbf{Size} & \textbf{Resolution} & \textbf{Year} & \textbf{Type} \\
+        \hline
+        
+        BowFire & 226 & 1024x768 & 2015 & Classification + Segmentation \\
+        \hline
+        FLAME & 2003 & 3480x2160 & 2020 & Segmentation \\ 
+        \hline
+        Wildlife Observers and Smoke Recognition & 256 & 720x576 & 2010 & Segmentation \\
+        \hline
+        Open Wildfire Smoke Dataset & 2192 & 640x480 & 2021 & Object Detection \\
+        \hline
+        FASDD & 101087 & Varying* & 2022 & Object Detection \\
+        \hline 
+    \end{tabular}
+    \label{tab:datasets}
+\end{table*}
+
+\
+
+\noindent After careful consideration, we ultimately selected the FLAME dataset for our project. Its moderate size, high-resolution images, and availability make it an ideal choice for our needs. We believe that the FLAME dataset will provide us with a robust foundation for our project, allowing us to develop and test our fire detection model effectively.
