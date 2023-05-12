@@ -29,6 +29,8 @@ Detecting forest fires using deep learning.
 
 Checkpoints of the trained models are available in releases.
 
+`segformer-b0` finetuned endpoint can also be found on [huggingface](https://huggingface.co/millionhz/segformer-b0-finetuned-flame).
+
 ## Installation and inference
 
 - The notebooks will automatically download the self hosted dataset and checkpoints.
